@@ -52,8 +52,6 @@ public class CPU_Scheduler {
 				arrival[i] = rand.nextInt(10 - 1 + 1) + 1;
 				burst[i] = rand.nextInt(10 - 1 + 1) + 1;
 			}
-			
-			
 		}
 		else {
 			//Reads numbers from file
@@ -76,7 +74,6 @@ public class CPU_Scheduler {
 					fileNums[counter] = inputFile.nextInt();
 					counter++;
 				}
-			
 	        }
 	        // Divides the burst times and arrivals times from the temporary fileNumes array
 	        // And puts them in the corresponding burstTime and arrivalTime array
@@ -100,7 +97,6 @@ public class CPU_Scheduler {
 			else
 				numOfProcess = (counter/2) + 1;
 			
-	       
 			System.out.println();
 			
 		}
@@ -169,10 +165,7 @@ public class CPU_Scheduler {
 	                    //Same process but for PID
 	                    temp = pid[i];
 	                    pid[i] = pid[j];
-	                    pid[j] = temp;
-	                    
-	                    
-	                    
+	                    pid[j] = temp;  
 	                }
 	            }
 	        }
@@ -210,9 +203,7 @@ public class CPU_Scheduler {
 				}
 				tt[i] = comp[i] - at[i];  
 				wt[i] = tt[i] - burst[i]; 
-		 }
-		 
-			
+		 }	
 	}
 	// Function that applies Round Robin to processes with user defined quantum time (1-5)
 	public static void roundRobin(int size, int [] pid, int [] at, int [] burst, int[] comp, int[] wt, int [] tt, int qt) {
